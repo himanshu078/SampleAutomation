@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="To test login functionality for loblaws website" skipped="2" tests="3" time="1.25" timestamp="2023-04-15 08:38:18"><testcase name="Test login with multiple credentials"><skipped/></testcase><testcase name="Test login with one user credential with hardcoded values user1"/></testsuite>
