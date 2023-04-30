@@ -7,8 +7,7 @@ public class ReportLog extends PageObject{
 	
 	@Step("{0}")
 	public void LOG(String message) {
-		
-		
+			
 	}
 	
 
