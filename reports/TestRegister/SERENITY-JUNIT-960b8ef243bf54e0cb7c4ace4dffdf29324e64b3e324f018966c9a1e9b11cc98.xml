@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="To test register functionality on Lowblaws website" skipped="0" tests="1" time="39.75" timestamp="2023-05-06 08:13:16"><testcase name="To test Error message on Register Page"><failure message="confirm password error test case is working " type="java.lang.AssertionError">confirm password error test case is working </failure><system-err>confirm password error test case is working &#13;
+pages.RegisterPage.testErrorMessage(RegisterPage.java:77)&#13;
+stepdefinitions.RegisterSteps.validates_the_error_message_on_register_page(RegisterSteps.java:55)&#13;
+✽.validates the error message on register page(file:///C:/Users/Swati/eclipse-workspace/Sample/TestingAutomation/src/test/resources/features/Register.feature:34)&#13;
+</system-err></testcase></testsuite>

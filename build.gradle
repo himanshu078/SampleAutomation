@@ -31,6 +31,7 @@ dependencies {
                 "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}",
                 "ch.qos.logback:logback-classic:${logbackVersion}"
+    implementation group: 'org.apache.poi', name: 'poi', version: '5.2.3'
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 

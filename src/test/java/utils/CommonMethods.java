@@ -6,6 +6,7 @@ import net.serenitybdd.core.pages.PageObject;
 public class CommonMethods extends PageObject{
 	
 	public void navigateForward() {
+		
 		getDriver().navigate().forward();
 		waitABit(3000);
 		System.out.println(getDriver().getCurrentUrl());

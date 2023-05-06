@@ -152,7 +152,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 30-04-2023 15:37</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 03-05-2023 20:15</span>
     <br style="clear:left"/>
 </div>
 
@@ -199,6 +199,13 @@
                             </p>
                             <p class="tag">
                                 <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f99ed7f7216d163dbcf7969667d9a78f81a5965d9fd640a011444b365d4d3710.html">No Such Window Exception
+                                        (error)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
                                     <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
                                 </a>
                                 </span>
@@ -217,9 +224,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">To test successful Register
+                                <span class="error-color">To test successful Register
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -240,27 +247,44 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">No such window exception: no such window: target window already closed</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.NoSuchWindowException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>pages.HomePage.openApplication(HomePage.java:48)<br />stepdefinitions.RegisterSteps.user_launches_loblaws_url(RegisterSteps.java:19)<br />✽.User launches Loblaws url(file:///C:/Users/Swati/eclipse-workspace/Sample/TestingAutomation/src/test/resources/features/Register.feature:7)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="aa114fd56816d0a1534c43f91cfa968b8ed9e581f7189935e031f849e8fc4bc8.png" title=" 1: To test successful Register ({Email=John_Singh01@gmail.com, Password=FirstTest@001, confirmPassword=FirstTest@001})" width="1920"/>
-                <img src="aa114fd56816d0a1534c43f91cfa968b8ed9e581f7189935e031f849e8fc4bc8.png" title=" Given User launches Loblaws url" width="1920"/>
-                <img src="aa114fd56816d0a1534c43f91cfa968b8ed9e581f7189935e031f849e8fc4bc8.png" title=" Loblaws Url is opened" width="1920"/>
-                <img src="28f6cb342a6949e8a69848c65878830d7e9773dab862a619ddfc380f8837ef3b.png" title=" Cookies are cleared" width="1920"/>
-                <img src="3956d65e679bd8b9f5f42784e6ffc35926e7e752113de51b3219c3fece7a0c96.png" title=" Given User launches Loblaws url (completed)" width="1920"/>
-                <img src="7a013c0385bd2b52c104665f19167d20a5a793ec24c32d31b39e60bd15fb8a53.png" title=" When User clicks on Sign In page" width="1920"/>
-                <img src="ba9cd86804d65db5576c001e120b31030a539f2b7858fbdda26255b053420a43.png" title=" Then User Clicks on Create PC id" width="1920"/>
-                <img src="ba9cd86804d65db5576c001e120b31030a539f2b7858fbdda26255b053420a43.png" title=" clicked on CreatePD ID link" width="1920"/>
-                <img src="ba9cd86804d65db5576c001e120b31030a539f2b7858fbdda26255b053420a43.png" title=" Then User Clicks on Create PC id (completed)" width="1920"/>
-                <img src="062f8ee9f633279a9fce3a0920ada4da4a855263c1972a32c10de3d8d4fc2bb5.png" title=" Then User creates an account by providing enter &quot;John_Singh01@gmail.com&quot;,&quot;FirstTest@001&quot; and &quot;FirstTest@001&quot;" width="1920"/>
-                <img src="062f8ee9f633279a9fce3a0920ada4da4a855263c1972a32c10de3d8d4fc2bb5.png" title=" Entered the email" width="1920"/>
-                <img src="89d0c0cc9d5975ba7d878626c1a84c17da4ef4a8c6d0594470cbacd215736d8a.png" title=" Entered the password" width="1920"/>
-                <img src="5cdc4b0d1b0a743528ce22e57536cd9922cee4ede2f13b0b60e73ac118c9f7a9.png" title=" Entered the confirm password" width="1920"/>
-                <img src="05792f79299ae133ed0ece87cdc5da4bd0e9777310c38a72682295ce06ac48b8.png" title=" Then User creates an account by providing enter &quot;John_Singh01@gmail.com&quot;,&quot;FirstTest@001&quot; and &quot;FirstTest@001&quot; (completed)" width="1920"/>
-                <img src="1500a4a09a6a4d2cc7266a0a988f353be0ecfd85be846d2babdce0105d676855.png" title=" Then user clicks on Agree checkbox" width="1920"/>
-                <img src="1500a4a09a6a4d2cc7266a0a988f353be0ecfd85be846d2babdce0105d676855.png" title=" Clicked on checkbox" width="1920"/>
-                <img src="1500a4a09a6a4d2cc7266a0a988f353be0ecfd85be846d2babdce0105d676855.png" title=" Then user clicks on Agree checkbox (completed)" width="1920"/>
-                <img src="6d9c74562e8bf29d69155bab9c42e2fe2d7b341c7e5b6fd5652488a335e48766.png" title=" Then user clicks creates PC id button" width="1920"/>
-                <img src="6d9c74562e8bf29d69155bab9c42e2fe2d7b341c7e5b6fd5652488a335e48766.png" title=" Clicked on PC ID button: <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="bf07b05906dfa1e92c0f4a92b61a07e118b64a91a47d4425d5df41059a6fe145.png" title=" 1: To test successful Register ({Email=John_Singh01@gmail.com, Password=FirstTest@001, confirmPassword=FirstTest@001})" width="1920"/>
+                <img src="bf07b05906dfa1e92c0f4a92b61a07e118b64a91a47d4425d5df41059a6fe145.png" title=" Given User launches Loblaws url" width="1920"/>
+                <img src="bf07b05906dfa1e92c0f4a92b61a07e118b64a91a47d4425d5df41059a6fe145.png" title=" Loblaws Url is opened: <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 
