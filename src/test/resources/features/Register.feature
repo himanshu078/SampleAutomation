@@ -97,7 +97,18 @@ Then user search for "Nestle" brand in the filter
 Scenario: To test page navigation
 Given User launches Loblaws url for page navigation
 
-################################################################################
+
+#working
+#hover on category, select a subcategory and select the item under subcategory and click on it
+@testMouseActionsforHover
+Scenario Outline: To test mouse actions and hover
+Given User launches Loblaws url
+When user selects one "<Category>" and "<SubCategory>"
+
+Examples:
+|Category|SubCategory|
+|Grocery|International Foods|
+
 
 
 @testMouseActions
@@ -111,17 +122,6 @@ Examples:
 |Category|SubCategory|NumberOfSubcategories|NumberOfItemsInSubcategories|
 |Grocery|International Foods|16|43|
 
-
-#working
-#hover on category, select a subcategory and select the item under subcategory and click on it
-@testMouseActionsforHover
-Scenario Outline: To test mouse actions and hover
-Given User launches Loblaws url
-When user selects one "<Category>" and "<SubCategory>"
-
-Examples:
-|Category|SubCategory|
-|Grocery|International Foods|
 
 
 #working
@@ -146,15 +146,11 @@ Examples:
 |TEST.pdf|
 
 
-@testiFrames
-Scenario: To test page iframes
-Given User tests iframes on the page
-
 #working
 @testwindowHandles
 Scenario: To test window handles
 Given User wanted to test windowhandles
-Given user wanted to test windowhandles for loblaws
+#Given user wanted to test windowhandles for loblaws
 
 #working
 @testWebTable  

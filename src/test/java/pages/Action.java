@@ -22,6 +22,7 @@ public class Action extends PageObject{
 	int noOfItemsInSubCategory;
 	
 	
+	// hardcoding the category & subcatrgories name
 	public void simpleTestActions() {
 
 		Actions actions = new Actions(getDriver());
@@ -58,7 +59,7 @@ public class Action extends PageObject{
 
 	}
 
-
+	// getting the data from the feature file. same as simpleTestActions()
 	public void testActions(String category, String subCategory) {
 
 		Actions actions = new Actions(getDriver());
@@ -102,7 +103,8 @@ public class Action extends PageObject{
 
 	}
 
-
+	
+	// to get list of items (East Asian Foods) under a sub category (International Foods)
 	public int listOfItems(String subCategory) {
 
 		Actions actions = new Actions(getDriver());
@@ -136,6 +138,7 @@ public class Action extends PageObject{
 
 	}
 
+	// to get subcategories (International Foods) of items under a category (Grocery)
 	public int listOfSubCategories(String category) {
 
 		Actions actions = new Actions(getDriver());
@@ -170,9 +173,49 @@ public class Action extends PageObject{
 		return noOfSubCategories;
 
 	}
-
-
+	
+	
 	public void testDragAndDrop(){
+		
+		
+		getDriver().get("https://jqueryui.com/droppable/");
+		getDriver().manage().window().maximize();
+		waitABit(8000);
+		
+		getDriver().switchTo().frame(0);
+		
+		String Text =  getDriver().findElement(By.xpath("//div[@id='droppable']/p")).getText();
+		
+		
+		WebElement source =  getDriver().findElement(By.id("draggable"));
+		WebElement target =  getDriver().findElement(By.id("droppable"));
+		
+		
+		
+		
+		System.out.println("before action " + Text);
+		
+		Actions action = new Actions(getDriver());
+		action.dragAndDrop(source, target).build().perform();
+		waitABit(3000);
+	
+		
+		String Text1 =  getDriver().findElement(By.xpath("//div[@id='droppable']/p")).getText();
+		System.out.println("After action " + Text1);
+		
+		Assert.assertEquals("Dropped!", Text1);
+		
+
+	}
+	
+	
+	
+	
+	
+	
+
+
+	public void testDragAndDrop1(){
 
 		getDriver().get("https://jqueryui.com/droppable/");
 		getDriver().manage().window().maximize();
@@ -199,7 +242,16 @@ public class Action extends PageObject{
 		System.out.println(finalText);
 		//	Assert.assertEquals("Dropped!", finalText);
 
+	}
+	
+	public void noOfItemsInSubCategory(int ExpectedNumberOfItemsInSubCategories) {
+		Assert.assertEquals(ExpectedNumberOfItemsInSubCategories,noOfItemsInSubCategory);
+	}
+
+	public void noOfCategories(int ExpectedNumberOfSubCategories) {
+		Assert.assertEquals(ExpectedNumberOfSubCategories,noOfSubCategories);
 
 	}
+
 
 }

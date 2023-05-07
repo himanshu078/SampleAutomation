@@ -19,6 +19,12 @@ public class RegisterSteps {
 	Product product;
 	@Steps
 	Action action;
+	@Steps
+	PopUpsConcepts popUp;
+	@Steps
+	WindowHandles handle;
+	@Steps
+	WebTable table;
 	
 	
 	@Given("user launches url {string}")
@@ -144,6 +150,73 @@ public class RegisterSteps {
 		action.simpleTestActions();
 	    
 	}
+	
+	
+	@Given("User launches url to test drag and drop")
+	public void user_launches_url_to_test_drag_and_drop() {
+	    
+		action.testDragAndDrop();
+	}
+	
+	
+	@Given("User tests Javascript popup")
+	public void user_tests_javascript_popup() {
+		popUp.testJavaScriptAlerts();
+	}
+	
+	
+	@When("User tests windows popup for {string}")
+	public void user_tests_windows_popup_for(String fileName) {
+	    	
+		popUp.testDesktopPopUp(fileName);
+	}
+	
+	
+	@Given("User wanted to test windowhandles")
+	public void user_wanted_to_test_windowhandles() {
+		
+		handle.testWindowHandles();
+	    
+	}
+	@Given("user wanted to test windowhandles for loblaws")
+	public void user_wanted_to_test_windowhandles_for_loblaws() {
+		
+		handle.testWindowHandleForLoblaws();
+	    
+	}
+	
+	@Given("user wanted to test web table")
+	public void user_wanted_to_test_web_table() {
+		
+		table.testWebTables();
+	   
+	}
+	
+	
+	@When("user selects {string} and {string}")
+	public void user_selects_grocery_and(String category, String subcategory) {
+		//product.categoryProducts(category, subcategory);
+		
+		action.listOfSubCategories(category);
+		action.listOfItems(subcategory);
+		
+	}
+	
+	
+	@Then("user validates number of subcategories under a category is {string}")
+	public void user_validates_number_of_subcategories_under_a_category_is(String noOfSubcategoires) {
+
+		action.noOfCategories(Integer.parseInt(noOfSubcategoires));
+	}
+	
+	
+	@Then("user validates number of items under a subcategory is {string}")
+	public void user_validates_number_of_items_under_a_subcategory_is(String noOfItems) {
+	    
+		action.noOfItemsInSubCategory(Integer.parseInt(noOfItems));
+	}
+
+
 
 
 

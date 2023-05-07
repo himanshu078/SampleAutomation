@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
        // features = "src/test/resources/features",
         features = "src/test/resources/features",
-        tags = "@RegisterError", // @Login
+        tags = "@testWebTable", // @Login
         glue = "stepdefinitions"
 )
 public class Runner {}
